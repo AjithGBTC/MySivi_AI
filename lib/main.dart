@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mysivi_ai/screen/RootPage.dart';
+import 'package:mysivi_ai/screen/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'provider/UserProvider.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  RootPage(),
+      home:  SplashScreen(),
     );
   }
 }
