@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+import 'package:mysivi_ai/screen/RootPage.dart';
+import 'package:provider/provider.dart';
+
+import 'provider/UserProvider.dart';
+import 'provider/ChatProvider.dart';
+
+
+void main() {
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => UserProvider()),
+        ChangeNotifierProvider(create: (_) => ChatProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home:  RootPage(),
+    );
+  }
+}
